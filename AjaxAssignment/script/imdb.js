@@ -40,7 +40,7 @@ function DisplayData(selectedChoice) {
     let movieYear = "";
     let movieID = "";
     let temp = "";
-    let urlVal= `http://www.omdbapi.com/?`;
+    let urlVal= `https://www.omdbapi.com/?`;
     let key = `&apikey=7487c337`
     if (selectedChoice) 
     {
