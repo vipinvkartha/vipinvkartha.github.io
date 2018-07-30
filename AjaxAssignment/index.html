@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/imdb.css">
+    <script src="script/imdb.js"></script>
+</head>
+
+<body>
+    <h1 style="text-align: center"> IMDB</h1>
+    <div class="movie">
+        <div class="container">
+            <h2>Search your movie</h2>
+            <p>The form below contains two input elements; one of type text and one of type password:</p>
+            <form>
+                <label class="radio-inline"><input type="radio" id="rad1" name="optradio" value="title" checked>TITLE/YEAR</label>
+                <label class="radio-inline"><input type="radio" id="rad2" name="optradio" value="id">IMDB ID</label>
+                <div class="form-group">
+                    <label for="usr">Title:</label>
+                    <input type="text" class=" inputBar form-control " id="movie_title">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Year:</label>
+                    <input type="text" class="form-control inputBar" id="movie_year">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">IMDB ID:</label>
+                    <input type="text" class="form-control inputBar" id="movie_id">
+                </div>
+            </form>
+            <button type="button" class="btn btn-primary btn-lg btn-block Search" id="SearchBtn">SEARCH</button>
+        </div>
+    </div>
+    <div class="container MovieData" id="movie">
+        <h2 style="text-align:center" id="titleHead"></h2>
+        <img src="images/NoImage.jpeg" id="poster" class="img-responsive IMDBPoster">
+        <div class="panel panel-default" style="background-color: grey">
+            <div class="panel-body" id="title"></div>
+            <div class="panel-body" id="actors"></div>
+            <div class="panel-body" id="director"></div>
+            <div class="panel-body" id="genre"></div>
+            <div class="panel-body" id="lang"></div>
+            <div class="panel-body" id="plot"></div>
+            <div class="panel-body" id="release"></div>
+            <div class="panel-body" id="runtime"></div>
+            <div class="panel-body" id="imdbid"></div>
+            <div class="panel-body" id="rating"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

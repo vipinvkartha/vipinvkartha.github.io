@@ -1,0 +1,45 @@
+body {
+    /*background-image: url("../images/cinema.jpg");*/
+    background-color: #cccccc;
+ }
+ .tab { 
+    display:inline-block; 
+    margin-right: 80px; 
+    width: 80px;
+}
+.movie
+{
+    width: 80%;
+    background-color: #829EA0;
+    margin-left: 10%;
+}
+.output
+{
+    background-color: grey;
+}
+.Search
+{
+    margin-bottom: 0.5%;
+}
+.inputBar
+{
+    margin-right: 1%;
+}
+.MovieData
+{
+    display: none;
+}
+.IMDBPoster
+{
+    border: 2px;
+    border-radius: 10%;
+    text-align: center;
+    display: block;
+    border-style: solid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    width: 200px;
+    height: 250px;
+}

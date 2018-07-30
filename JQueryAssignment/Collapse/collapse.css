@@ -1,0 +1,23 @@
+.collapse-accordion
+{
+    background-color: #eee;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.4s;
+    outline: none;
+}
+.collapse-accordion:hover
+{
+    background-color: #ccc;
+}
+.content
+{
+    padding: 15px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
