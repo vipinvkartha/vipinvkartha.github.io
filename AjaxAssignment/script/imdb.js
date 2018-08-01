@@ -44,7 +44,7 @@ $(document).ready(function () {
 
 function DisplayData(selectedChoice) {
 
-    console.log(selectedChoice);
+   // console.log(selectedChoice);
     let movieTitle = "";
     let movieYear = "";
     let movieID = "";
@@ -80,7 +80,7 @@ function DisplayData(selectedChoice) {
         }
     }
     urlVal = urlVal.concat(key);
-        console.log(urlVal);
+        //console.log(urlVal);
         ClearData();
 
         $.ajax({
@@ -88,14 +88,18 @@ function DisplayData(selectedChoice) {
             datatype: 'JSON',
             url: urlVal,
             success: (data) => {
-                //console.log(data);
+                console.log(data);
                 let response = data.Response;
                 //console.log(response);
                 if (response == "True") {
                     $('.not_found').hide();
                     $('#movie').show();
                     $('titleHead').text(`${data.Title}`);
-                    $('#poster').attr('src', `${data.Poster}`);
+                    if(data.Poster != 'N/A')
+                        $('#poster').attr('src', `${data.Poster}`);
+                    else
+                        $('#poster').attr('src',"images/NoImage.jpeg");
+
                     $('#title').append(`<span class="tab">   TITLE   :</span>${data.Title}`);
                     $('#actors').append(`<span class="tab">  ACTORS  :</span>${data.Actors}`);
                     $('#director').append(`<span class="tab">DIRECTOR:</span>${data.Director}`);
