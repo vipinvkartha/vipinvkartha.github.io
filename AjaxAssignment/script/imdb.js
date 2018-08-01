@@ -5,7 +5,7 @@ $(document).ready(function () {
     $("#movie_title").prop("disabled", false);
     $("#movie_year").prop("disabled", false);
     $("#movie_id").prop("disabled", true);
-
+    $("#movie_id").css('opacity','0.5')
     $('input:radio[name="optradio"]').change(
         function () {
             if (this.checked && this.value == 'title') {
@@ -17,6 +17,10 @@ $(document).ready(function () {
                 $("#movie_title").prop("disabled", false);
                 $("#movie_year").prop("disabled", false);
                 $("#movie_id").prop("disabled", true);
+                $("#movie_id").val('');
+                $("#movie_id").css('opacity','0.5')
+                $("#movie_title").css('opacity','1')
+                $("#movie_year").css('opacity','1')
                 selectedChoice = true;
 
             }
@@ -24,6 +28,11 @@ $(document).ready(function () {
                 $("#movie_title").prop("disabled", true);
                 $("#movie_year").prop("disabled", true);
                 $("#movie_id").prop("disabled", false);
+                $("#movie_title").val('');
+                $("#movie_year").val('');
+                $("#movie_id").css('opacity','1')
+                $("#movie_title").css('opacity','0.5')
+                $("#movie_year").css('opacity','0.5')
                 selectedChoice = false;
             }
         });
@@ -83,6 +92,7 @@ function DisplayData(selectedChoice) {
                 let response = data.Response;
                 //console.log(response);
                 if (response == "True") {
+                    $('.not_found').hide();
                     $('#movie').show();
                     $('titleHead').text(`${data.Title}`);
                     $('#poster').attr('src', `${data.Poster}`);
@@ -100,6 +110,7 @@ function DisplayData(selectedChoice) {
                 else {
                     console.log("some error occured");
                     $('#movie').hide();
+                    $('.not_found').show();
                 }
 
             },
