@@ -1,3 +1,6 @@
+/*This is the class for Social Profile. It contains member variables,constructor and setter and getter functions*/
+
+
 class FacebookProfile{
     
         private user_name : string;

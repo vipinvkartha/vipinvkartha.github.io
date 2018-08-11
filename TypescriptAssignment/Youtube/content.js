@@ -1,3 +1,4 @@
+/*This is the class for Youtube Video. It contains member variables,constructor and setter and getter functions*/
 var YoutubeVideo = /** @class */ (function () {
     function YoutubeVideo(Title, views, likes, dislikes, comments, description, category, quality, age, subtitles) {
         var _this = this;

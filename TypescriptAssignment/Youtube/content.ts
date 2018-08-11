@@ -1,3 +1,5 @@
+/*This is the class for Youtube Video. It contains member variables,constructor and setter and getter functions*/
+
 class YoutubeVideo {
 
     private Title: string;

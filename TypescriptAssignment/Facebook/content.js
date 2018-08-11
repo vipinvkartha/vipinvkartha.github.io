@@ -1,3 +1,4 @@
+/*This is the class for Social Profile. It contains member variables,constructor and setter and getter functions*/
 var FacebookProfile = /** @class */ (function () {
     function FacebookProfile(user_name, user_email, friend_list_count, education, birthday, mobile, work, description) {
         var _this = this;
